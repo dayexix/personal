@@ -1,0 +1,563 @@
+header{
+  max-width: 1440px;
+  margin: 0 auto;
+  /*! display: flex; */
+  /*! justify-content: space-between; */
+  padding-bottom: 20px;
+}
+
+header h1{
+   margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header h1 a{
+}
+
+header h1 a::before{
+  content: "";
+  width: 80px;
+  height: 30px;
+  display: inline-block;
+  background-image: url(../img/samsung.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: -11px;
+  margin-right: 12px;
+}
+
+header ul{
+  display: flex;
+  gap: 30px;
+  justify-content: left;
+}
+
+header li{
+}
+
+header div{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  position: relative;
+}
+
+header div form{
+  position: absolute;
+  right: 0;
+  top: -41px;
+  background-color: #F5F5F5;
+  border-radius: 40px;
+  padding: 5px 15px;
+  display: flex;
+}
+
+a.cart{
+  background-image: url(../img/cart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+a.user{
+  background-image: url(../img/user.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+  display: block; 
+}
+header div form input{
+  border: none;
+  background-color: transparent;
+}
+
+header div form button.search{
+  background-color: transparent;
+  border: none;
+  background-image: url(../img/search.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+
+/*           타이틀영역           */
+
+div#title{
+  background-color: #F7E2E2;
+  height: 41.66666666666667vw;
+  background-image: url(../img/title.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+div#title::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+div#title div.wrap{
+  width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  align-items: start;
+}
+div#title div.wrap ul.hash{ 
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+  color: white;
+  height: 50px;
+  width: 400px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div#title div.wrap h2{
+  margin-bottom: 40px;
+  font-size: 64px;
+  font-family: 'Dongle', sans-serif;
+  text-shadow: 2px 2px 5px white;
+  color: #1D9BEE;
+}
+div#title div.wrap p{
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+div#title div.wrap>a{ 
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  width: 90px;
+  transition: all 0.5s ease-in-out 1s;
+}
+div#title div.wrap > a:hover{
+  background-color: white;
+  color: black;
+  transform: scale(2) rotate(360deg);
+}
+div#title div.wrap ul.list{ 
+  display: flex;
+  gap: 10px;
+  background-color: blue;
+  color: white;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  bottom: 25px;
+  left: calc(50% - 615px);
+  width: 1230px;
+}
+div#title div.wrap ul.list a{
+  color: white;
+  line-height: 3;
+  display: block;
+}
+div#title div.wrap .control{
+  position: absolute;
+  left: 0;
+  top: calc(50% - 9px);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div#title div.wrap button{
+  
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  font-size: 0;
+}
+div#title div.wrap span .prev{
+  transform: translateX(-200%);
+  background-image: url(../img/arrleft.svg);
+}
+div#title div.wrap span .next{
+  transform: translateX(200%);
+  background-image: url(../img/arrright.svg);
+}
+/* 메인 */
+
+main {
+  
+}
+main #product {
+  
+}
+main #product .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  justify-content: center;
+  column-gap: 40px;
+}
+main #product .wrap ul.list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main #product .wrap ul.list li {
+  
+}
+main #product .wrap ul.list li a {
+  line-height: 3;
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+main #product .wrap ul.list li a:hover{
+  background-color: #eee;
+}
+
+/* 제품안내 */
+
+main #product .wrap div.jemok h3 {
+  
+}
+main #product .wrap div.jemok p { 
+  margin-bottom: 30px;
+}
+main #product .wrap ul.contents {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  width: 980px;
+  column-gap: 40px;
+}
+main #product .wrap div.jemok{
+  background-image: url(../img/je1.png);
+  background-size: cover;
+  background-position:center;
+}
+main #product .wrap div.jemok a{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+main #product .wrap ul.contents li {
+  
+}
+main #product .wrap ul.contents li:nth-child(1){
+  background-image: url(../img/je2.png);
+}
+main #product .wrap ul.contents li:nth-child(2){
+  background-image: url(../img/je3.png);
+}
+main #product .wrap ul.contents li:nth-child(3){
+  background-image: url(../img/je4.png);
+}
+main #product .wrap ul.contents li:nth-child(4){
+  background-image: url(../img/je5.png);
+  margin-left: -339px;
+}
+main #product .wrap ul.contents li:nth-child(5){
+  background-image: url(../img/je6.png);
+  background-size: cover;
+  background-position: center;
+}
+main #product .wrap ul.contents li:nth-child(6){
+  background-image: url(../img/je7.png);
+}
+main #product .wrap ul.contents li a{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  row-gap: 20px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  height: 100%;
+}
+main #product .wrap ul.contents li h4 {
+  
+}
+main #product .wrap ul.contents li h4 span {
+  
+}
+main #product .wrap ul.contents li p {
+ 
+}
+main #product .wrap ul.contents::after{
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: #eee;
+  border-radius: 20px;
+  text-align: center;
+  margin-left: -1px;
+  background-image: url(../img/je8.png);
+  background-position: center;
+  background-size: cover;
+}
+
+/* 모바일 & pc,TV & 오디오 */
+#mobile,#tv{
+  line-break: 1.6;
+}
+#mobile h2,#tv h2{
+  
+}
+#mobile .wrap,#tv .wrap{
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+#mobile ul.list,#tv ul.list{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+#mobile ul.list li a{
+  padding-right: 30px;
+}
+#mobile div.contents{
+  /*! justify-content: flex-start; */
+  /*! flex-wrap: nowrap; */
+  /*! width: 400%; */
+  display: block;
+}
+#mobile .slick-prev{
+  left: 25px;
+  z-index: 2;
+  background-image: url(../img/arrleft1.svg);
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  border-radius: 50px;
+  display: block;
+}
+#mobile .slick-next{
+  right: 25px;
+  z-index: 2;
+  background-image: url(../img/arrright1.svg);
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+#tv div.contents{
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  width: 500%;
+  height: 800px;
+}
+#mobile div.contents article,#tv div.contents article{ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mobile div.contents img{
+  width: 100%;
+  background-color: #eee;
+  border-radius: 30px;
+}
+#mobile div.contents article figure{
+  width: 680px;
+  margin: 30px 0;
+}
+#mobile div.contents article h3,#tv div.contents article h3{
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: 'Samsung Sharp Sans', 'SamsungOneKorean';
+}
+#mobile div.contents article p{
+  
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.33;
+}
+#mobile div.contents article a{
+  min-width: 96px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+/* tv & 오디오 */
+#tv {
+  
+}
+#tv .wrap {
+  color: #fff;
+  padding: 0;
+  background-color: transparent;
+}
+#tv .wrap h2 {
+
+}
+#tv .wrap ul.list {
+  color: #fff;
+}
+#tv .wrap .contents {
+  
+}
+#tv .wrap .contents article {
+  
+}
+#tv .wrap .contents article figure {
+  
+}
+#tv .wrap .contents article figure img {
+  
+}
+#tv .wrap .contents article h3 {
+  
+}
+#tv .wrap .contents article p {
+  line-height: 2;
+}
+#tv .wrap .contents article a.more {
+  
+}
+
+/* 어사이드 */
+aside{  
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+aside a{  
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 0;
+  background-size: 76%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+aside a.more{  
+  background-color: #529BC4;
+  background-image: url(../img/add.svg);
+}
+aside a.more::before{
+ content: "";
+}
+aside a.top{  
+  background-color: black;
+  background-image: url(../img/top.svg);
+  background-size: 95%;
+}
+
+/* 하단영역 */
+
+footer {
+  
+}
+footer div.wrap {
+  width: auto;
+  line-height: 2;
+}
+footer div.wrap .full{
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  margin-bottom: 50px;
+}
+footer div.wrap ul.fnb{
+  /*! flex-wrap: wrap; */
+  margin-bottom: 30px;
+  width: 1440px;
+  margin: 0 auto;
+  height: 355px;
+  position: relative;
+}
+footer div.wrap ul.fnb>li{
+  border-left: 1px solid #666;
+  width: calc(100% / 6);
+  box-sizing: border-box;
+  padding: 30px 0 30px 20px;
+}
+footer div.wrap ul.fnb>li:first-child{
+  width: calc(100% / 6 *2);
+}
+footer div.wrap ul.fnb>li:nth-child(6){
+  position: absolute;
+  left: calc(100% / 6 *4);
+  top: 160px;
+}
+footer div.wrap ul.fnb>li:last-child{
+  /*! border-right: 1px solid #666; */
+  position: absolute;
+  left: calc(100% / 6 *5);
+  top: 160px;
+}
+footer div.wrap ul.fnb li h2{
+  margin-bottom: 20px;
+}
+footer div.wrap ul.fnb li ul.sub{
+ 
+}
+footer div.wrap ul.fnb li ul.sub li{
+  
+}
+footer div.wrap ul.fnb li ul.sub li a{
+  line-height: 2;
+  display: block;
+}
+footer div.wrap address{
+  line-height: 2;
+  font-style: normal;
+}
+footer div.wrap address a{
+  
+}
+footer div.wrap p{
+  line-height: 1.6;
+}
+footer div.wrap .wcopyright{
+  margin: 35px 0;
+}
+footer div.wrap .wcopyright p{
+  line-height: 5;
+}
+
+
+
+
+
+
+
+
+

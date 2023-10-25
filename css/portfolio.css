@@ -1,0 +1,77 @@
+#portfolio {
+  
+  background-color: #fcd9df;
+}
+#portfolio .wrap {
+  width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 0;
+}
+#portfolio .wrap .port {
+  
+}
+#portfolio .wrap .port h2 {
+  margin-top: 50px;
+}
+#portfolio .wrap .port .port1 {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+#portfolio .wrap .port .port1 .portbox {
+  display: flex;
+  text-align: center;
+  margin-top: 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+#portfolio .wrap .port .port1 .portbox a {
+  
+}
+#portfolio .wrap .port .port1 .portbox a img {
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid #eee;
+  height: 100%;
+}
+#portfolio .wrap .port .port1 .portbox .port2 {
+  
+  margin-left: 30px;
+}
+#portfolio .wrap .port .port1 .portbox .port2 h3 {
+  margin: 20px 0 5px 0;
+  font-size: 30px;
+}
+#portfolio .wrap .port .port1 .portbox .port2 div {
+  
+  text-align: initial;
+  margin: 0px 100px;
+  margin-top: 50px;
+}
+#portfolio .wrap .port .port1 .portbox .port2 div p {
+  margin-top: 25px;
+}
+#portfolio .wrap .port .port1 .portbox .port2 div p em {
+  font-style: inherit;
+  font-weight: bold;
+  padding-right: 20px;
+  font-size: 17px;
+}
+#portfolio .wrap .port .port1 .portbox .port2 div p span {
+  
+  font-size: 20px;
+  color: #2d2b2b;
+}
+#portfolio .wrap .port .port1 .portbox .port2 div a.more {
+  border: 1px solid #eee;
+  font-size: 20px;
+  padding: 14px 30px;
+  margin-top: 25px;
+  border-radius: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}

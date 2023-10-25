@@ -1,0 +1,54 @@
+section#contact {
+  
+}
+section#contact .wrap {
+  display: flex;
+  width: 1200px;
+  padding: 200px 0;
+  padding-top: 300px;
+}
+section#contact .wrap .con1 {
+  width: 50%;
+  margin-right: 20px;
+  background-color: #fec7d0;
+  text-align: center;
+  height: 300px;
+  border-radius: 50px 0 50px 0;
+}
+section#contact .wrap .con1 h2 { 
+  margin-top: 50px;
+  font-size: 50px;
+  color: #6e5b5b;
+}
+section#contact .wrap .con1 p {
+  font-size: 25px;
+  border-top: 1px solid #715757;
+  padding-top: 40px;
+  color: #6e5b5b;
+}
+section#contact .wrap .con2 {
+  width: 50%;
+  background-color: #faf6f7;
+  border-radius: 0 50px 0 50px;
+}
+section#contact .wrap .con2 h3 {
+  
+  color: #6e5b5b;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+section#contact .wrap .con3{
+  text-align: right;
+  margin-right: 20px;
+  color: #6e5b5b;
+  margin-top: 120px;
+}
+section#contact .wrap .con3 p {
+  text-align: right;
+  margin-right: 20px;
+  color: #6e5b5b;
+}
+section#contact .wrap .con2 p span{
+  font-weight: initial;
+  color: #918484;
+}

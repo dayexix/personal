@@ -1,0 +1,60 @@
+.hide{
+    display:none; /*! / * 안보이게*\/ */
+ }
+ .padding50{
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+ .paddingT50{
+    padding-top: 50px;
+ }
+ 
+ .paddingB50{
+    padding-bottom: 50px;
+ }
+ .paddingB100{
+    padding-bottom: 100px;
+ }
+ .paddingT100{
+    padding-top: 100px;
+ }
+ .padding100{
+    padding: 100px;
+ }
+ .marginT50{
+    margin-top: 50px;
+ }
+ .marginT100{
+    margin-top: 100px;
+ }
+ .marginB50{
+    margin-bottom: 50px;
+ }
+ .marginB100{
+    margin-bottom: 100px;
+ }
+ .flex{
+    display: flex;
+ }
+ .flex-center{
+    justify-content:center;
+ }
+ .flex-between{
+    justify-content: space-between;
+ }
+ .flex-align-center{
+    align-items: center;
+ }
+ .flex-column{
+    flex-direction: column;
+ }
+ .text-center{
+    text-align: center;
+ }
+ .h2{
+    font-size: 60px;
+    text-align: center;
+ }
+ .h3{
+   font-size: 35px;
+ }

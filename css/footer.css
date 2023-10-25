@@ -1,0 +1,10 @@
+footer{
+  background-color: #3d3a3a;
+  color: #7c7979;
+}
+footer .wrap{
+  text-align: center;
+}
+footer .wrap p{
+  line-height: 1.4;
+}

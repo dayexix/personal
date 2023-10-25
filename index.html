@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dayexix.github.io/personal/">
+    <meta property="og:description" content="웹 퍼블리셔 포트폴리오: 김다예">
+    <meta property="og:keywords" content="웹 퍼블리셔,포트폴리오,신입 웹 퍼블리셔,웹기획">
+    <meta property="og:title" content="신입 웹 퍼블리셔 김다예">
+    <meta name="description" content="안녕하세요 웹 퍼블리셔 김다예입니다.">
+    <meta name="keywords" content="웹 퍼블리셔,포트폴리오,신입 웹 퍼블리셔,웹기획">
+    <title>웹 퍼블리셔 포트폴리오: 김다예</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/title.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/skill.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 제이쿼리연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <!-- 햄버거 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
+    <link rel="stylesheet" href="css/hamburger.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="hamburger/script.js"></script>
+    <script type="text/javascript" src="https://daks2k3a4ib2z.cloudfront.net/5317d67d660658b254000454/js/webflow.js?2f83b8326cc4c8f7327b5dba30444a37"></script>
+
+    <!-- 페이지 마우스휠 -->
+    <script type="text/javascript">
+      window.onload = function () {
+          var elm = ".full";
+          $("section").unwrap("main");
+          $("section").css("height","100%");
+          $(elm).each(function (index) {
+              // 개별적으로 Wheel 이벤트 적용
+              $(this).on("mousewheel DOMMouseScroll", function (e) {
+                  e.preventDefault();
+                  var delta = 0;
+                  if (!event) event = window.event;
+                  if (event.wheelDelta) {
+                      delta = event.wheelDelta / 120;
+                      if (window.opera) delta = -delta;
+                  } 
+                  else if (event.detail)
+                      delta = -event.detail / 3;
+                  var moveTop = $(window).scrollTop();
+                  var elmSelecter = $(elm).eq(index);
+                  // 마우스휠을 위에서 아래로
+                  if (delta < 0) {
+                      if ($(elmSelecter).next() != undefined) {
+                          try{
+                              moveTop = $(elmSelecter).next().offset().top;
+                          }catch(e){}
+                      }
+                  // 마우스휠을 아래에서 위로
+                  } else {
+                      if ($(elmSelecter).prev() != undefined) {
+                          try{
+                              moveTop = $(elmSelecter).prev().offset().top;
+                          }catch(e){}
+                      }
+                  }
+                  // 화면 이동 0.8초(800)
+                  $("html,body").stop().animate({
+                      scrollTop: moveTop + 'px'
+                  }, {
+                      duration: 800, complete: function () {
+                      }
+                  });
+              });
+          });
+      }
+  </script>
+    <!-- skill -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script  src="js/skill.js"></script>
+    <!-- 포트폴리오 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.pfani').slick({
+                dots:true,
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 500,
+                speed:3000
+            });
+        });
+    </script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+    <script src="pagescroll/scroll.js"></script>
+</head>
+<body>
+    <!--상단영역-->
+    <header>
+        <div class="wrap">
+            <h1 class="hide">
+              <a href="">DAYE KIM'S PORTFOLIO</a>
+            </h1>
+            <button class="toggle-menu">
+                <span></span>
+            </button>
+            <div id="menu" class="">
+                <nav class="main-nav">
+                  <ul>
+                    <li>
+                      <a href="#about">About</a>
+                    </li>
+                    <li><a href="#skill">Skill</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                      <a href="#contact">Contact</a>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 타이틀영역 -->
+    <div id="title" class="full">
+      <div class="wrap">
+          <div class="container">
+              <h1>
+                <span class="primary">KIM DAYE</span>
+                <span class="secondary">WEB PUBLISHER</span>
+              </h1>
+          </div>
+      </div>
+    </div>
+    <!-- 내용영역 -->
+    <main class="full">
+      <section id="about" class="full">
+        <div class="wrap padding100">
+          <h2 class="h2">ABOUT ME</h2>
+          <h3 class="h4">Let me introduce myself.</h3>
+          <div class="info">
+            <div class="info1">
+              <figure>
+                <img src="img/me.jpg" alt="내이미지사진">
+              </figure>
+            </div>
+            <div class="info2">
+                <h3>DAYE KIM</h3>
+                <p class="hbd">1997.04.22</p>
+                <p class="text">안녕하세요.
+                <p class="text"><span>"더 늦기전에 새로운 것에 도전해보자!"</span> 라는 마음으로</p>
+                <p class="text">웹 디자인 & 웹 퍼블리셔 분야를 공부하게 되었고,<br />매일 새롭게 배우며 직접 웹 사이트를 제작하는일이 즐거운 김다예입니다.</p>
+                <p class="text"><span>앞으로 함께 협력하고 성장하고싶은 웹 퍼블리셔가 되겠습니다.</span></p>
+                <div>
+                  <a href="https://docs.google.com/document/d/1WPvwa7FOXv-eYoskmSA8lv-3H2Ofr1g1/edit?usp=sharing&ouid=107718743956309630647&rtpof=true&sd=true" target="_blank">이력서</a>
+                  <a href="https://github.com/dayexix" target="_blank">깃허브 프로필</a>
+                </div>
+                <ul data-aos="fade-left">
+                  <li><a href="">#성실함</a></li>
+                  <li><a href="">#책임감</a></li>
+                  <li><a href="">#활발함</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skill" class="full">
+        <div class="wrap padding100">
+          <div class="skillcontainer">
+            <h2 class="h2">SKILL & <span>TOOLS</span></h2>
+            <p>It's a skill I can use</p>
+            <div class="left">
+              <div class="bar">
+                <div class="skill">HTML5</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble html">95%</div>
+                  <div class="bar-inner ht"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">CSS</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble css">95%</div>
+                  <div class="bar-inner cs"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">JQuery</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble jquery">70%</div>
+                  <div class="bar-inner jq"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">자바스크립트</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble javascript">70%</div>
+                  <div class="bar-inner java"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">웹 표준</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble webj">80%</div>
+                  <div class="bar-inner wpj"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">웹 접근성</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble webj1">80%</div>
+                  <div class="bar-inner wpp"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">반응형웹</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble web1">85%</div>
+                  <div class="bar-inner web"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">Vue.js</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble vuejs">70%</div>
+                  <div class="bar-inner vue"></div>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="bar">
+                <div class="skill">PHOTOSHOP</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble photo">75%</div>
+                  <div class="bar-inner ph"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">ILLUSTRATOR</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble illustrator">70%</div>
+                  <div class="bar-inner il"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">VISUAL STUDIO CODE</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble visual">90%</div>
+                  <div class="bar-inner vsc"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">카카오오븐</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble kakaoven">85%</div>
+                  <div class="bar-inner kakao"></div>
+                </div>
+              </div>
+              <div class="bar">
+                <div class="skill">BALSAMIQ</div>
+                <div class="bar-outer">
+                  <div class="speech-bubble balsamic">80%</div>
+                  <div class="bar-inner mic"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="portfolio" class="full">
+      <div class="wrap padding100">
+        <div class="port">
+          <h2 class="h2">PORTFOLIO</h2>
+          <div class="pfani port1">
+            <div class="portbox">
+              <a href="">
+                <img src="img/mo.jpg" alt="한국알콜산업이미지">
+              </a>
+              <div class="port2">
+                <h3>한국알콜산업 KAI</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>반응형 웹사이트</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>Index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3, Javascript, Jquery</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href="https://dayexix.github.io/pf3/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="portbox">
+              <a href="">
+                <img src="img/canon.jpg" alt="캐논이미지">
+              </a>
+              <div class="port2">
+                <h3>캐논</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>웹 사이트 (기업 사이트 제작)</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>Index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3, Javascript, Jquery</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href="https://dayexix.github.io/pf5/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="portbox">
+              <a href="">
+                <img src="img/samsung.jpg" alt="삼성이미지">
+              </a>
+              <div class="port2">
+                <h3>삼성홈페이지</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>웹 사이트 (기업 사이트 제작)</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>Index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3, Javascript, Jquery</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href="https://dayexix.github.io/pf1/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="portbox">
+              <a href="">
+                <img src="img/dang.PNG" alt="당근마켓이미지">
+              </a>
+              <div class="port2">
+                <h3>당근</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>웹 사이트 (기업 사이트 제작)</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href="https://dayexix.github.io/pf8/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="portbox">
+              <a href="">
+                <img src="img/kyochon.png" alt="교촌이미지">
+              </a>
+              <div class="port2">
+                <h3>교촌</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>웹 사이트 (기업 사이트 제작)</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>Index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3, Javascript, Jquery</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href="https://dayexix.github.io/pf6/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+            <div class="portbox">
+              <a href="">
+                <img src="img/jin.png" alt="하이트진로">
+              </a>
+              <div class="port2">
+                <h3>하이트진로</h3>
+                <div>
+                  <p>
+                    <em>TYPE</em>
+                    <span>웹 사이트 (기업 사이트 제작)</span>
+                  </p>
+                  <p>
+                    <em>PAGE</em>
+                    <span>Index</span>
+                  </p>
+                  <p>
+                    <em>TOOL</em>
+                    <span>HTML5, CSS3, Javascript, Jquery</span>
+                  </p>
+                  <p>
+                    <em>WORK</em>
+                    <span>퍼블리싱 100%</span>
+                  </p>
+                  <a href=" https://dayexix.github.io/pf7/" class="more">VIEW</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="contact" class="full">
+      <div class="wrap padding100">
+        <div class="con1">
+          <h2>CONTACT</h2>
+          <p>KIM DAYE</p>
+        </div>
+        <div class="con2">
+          <h3>Kim da ye</h3>
+          <div class="con3">
+            <p>E-mail <span>kdye0537@gmail.com</span></p>
+            <a href="https://www.instagram.com/_dayexix/"><p>Instagram <span>_dayexix</span></p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    <!-- 하단영역 -->
+    <footer>
+      <div class="wrap">
+        <p>Thanks for visiting my Website.<br />
+          Copyright ⓒ 2023. Da Ye Kim All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>
